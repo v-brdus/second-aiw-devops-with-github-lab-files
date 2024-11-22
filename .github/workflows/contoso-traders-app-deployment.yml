@@ -135,10 +135,10 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v3
       - name: npm install 
-        run: npm install && npm update && set NODE_OPTIONS=--openssl-legacy-provider
+        run: npm install -lts 
         working-directory: src/ContosoTraders.Ui.Website
       - name: npm run build
-        run: npm update && set NODE_OPTIONS=--openssl-legacy-provider && npm run build
+        run: npm run build
         working-directory: src/ContosoTraders.Ui.Website
      
       - name: azure login
