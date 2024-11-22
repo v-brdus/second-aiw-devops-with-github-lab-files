@@ -135,7 +135,7 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v3
       - name: npm install 
-        run: npm ci -lts 
+        run: npm ci -lts -force
         working-directory: src/ContosoTraders.Ui.Website
       - name: npm run build
         run: npm run build
