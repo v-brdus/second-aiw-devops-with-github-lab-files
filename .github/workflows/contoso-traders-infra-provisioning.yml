@@ -61,12 +61,12 @@ jobs:
       - name: add service principal to kv access policy
         uses: azure/CLI@v1
         with:
-          inlineScript: az keyvault set-policy -n ${{ env.KV_NAME }}${{ secrets.ENVIRONMENT }} --secret-permissions get list set --object-id $(az ad sp show --id $(az account show --query "user.name" -o tsv) --query "id" -o tsv)
+          inlineScript: az keyvault set-policy -n ${{ env.KV_NAME }}${{ secrets.ENVIRONMENT }} --secret-permissions get list set --object-id 635a2bb1-328b-4b65-81d0-f9b4ba3b92d6
       # @TODO: This next step really needs to go into the bicep provisioning script
       - name: add aks agentpool to kv access policy
         uses: azure/CLI@v1
         with:
-          inlineScript: az keyvault set-policy -n ${{ env.KV_NAME }}${{ secrets.ENVIRONMENT }} --secret-permissions get list --object-id $(az identity show --name ${{ env.AKS_CLUSTER_NAME }}${{ secrets.ENVIRONMENT }}-agentpool -g contoso-traders-aks-nodes-rg --query "principalId" -o tsv)
+          inlineScript: az keyvault set-policy -n ${{ env.KV_NAME }}${{ secrets.ENVIRONMENT }} --secret-permissions get list --object-id 635a2bb1-328b-4b65-81d0-f9b4ba3b92d6
       # Seed the DBs and storage accounts
       - name: seed products db
         uses: azure/sql-action@v2
