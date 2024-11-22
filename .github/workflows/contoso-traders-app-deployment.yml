@@ -42,8 +42,8 @@ jobs:
         uses: azure/docker-login@v1
         with:
           login-server: ${{ env.ACR_NAME }}${{ secrets.ENVIRONMENT }}.azurecr.io
-          username: ${{ env.ACR_NAME }}${{ secrets.ENVIRONMENT }}
-          password: ${{ secrets.ACR_PASSWORD }}
+          username: contosotradersacr54321
+          password: mbfqgcZ4NeKU8FqPhxTTwDhzBkom/NjPnyfn5rHfE++ACRD7ARUO
       - name: docker build
         run: docker build src -f ./src/ContosoTraders.Api.Carts/Dockerfile -t ${{ env.ACR_NAME }}${{ secrets.ENVIRONMENT }}.azurecr.io/${{ env.CARTS_ACR_REPOSITORY_NAME }}:latest -t ${{ env.ACR_NAME }}${{ secrets.ENVIRONMENT }}.azurecr.io/${{ env.CARTS_ACR_REPOSITORY_NAME }}:${{ github.sha }}
       - name: docker push (to acr)
@@ -72,8 +72,8 @@ jobs:
         uses: azure/docker-login@v1
         with:
           login-server: ${{ env.ACR_NAME }}${{ secrets.ENVIRONMENT }}.azurecr.io
-          username: ${{ env.ACR_NAME }}${{ secrets.ENVIRONMENT }}
-          password: ${{ secrets.ACR_PASSWORD }}
+          username: contosotradersacr54321
+          password: mbfqgcZ4NeKU8FqPhxTTwDhzBkom/NjPnyfn5rHfE++ACRD7ARUO
       - name: docker build
         run: docker build src -f ./src/ContosoTraders.Api.Products/Dockerfile -t ${{ env.ACR_NAME }}${{ secrets.ENVIRONMENT }}.azurecr.io/${{ env.PRODUCTS_ACR_REPOSITORY_NAME }}:latest -t ${{ env.ACR_NAME }}${{ secrets.ENVIRONMENT }}.azurecr.io/${{ env.PRODUCTS_ACR_REPOSITORY_NAME }}:${{ github.sha }}
       - name: docker push (to acr)
