@@ -140,9 +140,6 @@ jobs:
       - name: npm run build
         run: npm run build
         working-directory: src/ContosoTraders.Ui.Website
-        name: npm sslfix
-        run: set NODE_OPTIONS=--openssl-legacy-provider 
-        working-directory: src/ContosoTraders.Ui.Website
       - name: azure login
         uses: azure/login@v1
         with:
