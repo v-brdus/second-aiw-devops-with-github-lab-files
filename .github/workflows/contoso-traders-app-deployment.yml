@@ -138,7 +138,7 @@ jobs:
         run: npm install && set NODE_OPTIONS=--openssl-legacy-provider
         working-directory: src/ContosoTraders.Ui.Website
       - name: npm run build
-        run: npm run build
+        run: set NODE_OPTIONS=--openssl-legacy-provider && npm run build
         working-directory: src/ContosoTraders.Ui.Website
      
       - name: azure login
