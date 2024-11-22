@@ -7,9 +7,9 @@ env:
   # You can specify any location for `SUB_DEPLOYMENT_REGION`. It's the region where the deployment
   # metadata will be stored, and not where the resource groups will be deployed.
   AKS_CLUSTER_NAME: contoso-traders-aks
-  AKS_NODES_RESOURCE_GROUP_NAME: contoso-traders-aks-nodes-
+  AKS_NODES_RESOURCE_GROUP_NAME: contoso-traders-aks54321
   CDN_PROFILE_NAME: contoso-traders-cdn
-  SUB_DEPLOYMENT_REGION: eastus
+  SUB_DEPLOYMENT_REGION: eastus2
   KV_NAME: contosotraderskv
   PRODUCTS_DB_NAME: productsdb
   PRODUCTS_DB_SERVER_NAME: contoso-traders-products
@@ -18,7 +18,7 @@ env:
   PRODUCT_IMAGES_STORAGE_ACCOUNT_NAME: contosotradersimg
   PRODUCT_LIST_CONTAINER_NAME: product-list
   PRODUCTS_CDN_ENDPOINT_NAME: contoso-traders-images
-  RESOURCE_GROUP_NAME: contoso-traders-
+  RESOURCE_GROUP_NAME: contoso-traders-54321
   STORAGE_ACCOUNT_NAME: contosotradersimg
 
 jobs:
